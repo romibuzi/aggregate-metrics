@@ -1,0 +1,17 @@
+[
+  {
+    "metric": "temperature",
+    "value": 88,
+    "timestamp": "2022-06-04T00:01:00.000Z"
+  },
+  {
+    "metric": "temperature",
+    "value": 89,
+    "timestamp": "2022-06-04T12:01:30.000Z"
+  },
+  {
+    "metric": "precipitation",
+    "value": 0.5,
+    "timestamp": "2022-06-04T14:23:32.000Z"
+  }
+]
