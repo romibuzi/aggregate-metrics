@@ -1,0 +1,6 @@
+target/
+*.parquet
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
