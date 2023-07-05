@@ -1,5 +1,6 @@
 target/
 *.parquet
+metrics.json
 
 ### IntelliJ IDEA ###
 .idea/
