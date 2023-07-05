@@ -1,7 +1,7 @@
 Metrics Aggregation batch job with Spark
 ======
 
-Spark application to aggregate a given JSON file of metrics into a processed dataset in Parquet format.
+Spark application to aggregate metrics in a given JSON file into a processed dataset in Parquet format.
 
 ## Requirements
 
@@ -10,14 +10,14 @@ Spark application to aggregate a given JSON file of metrics into a processed dat
 
 ## Aggregations
 
-Aggregations on metrics are done at a daily level and store:
-- average of values for each metric
+Aggregations on metrics are done at a daily level, following aggregations are performed for each metric:
+- average of values
 - minimum value
 - maximum value
 - sum of values
 - count of values
 
-sum and count are kept in the generated processed Parquet to be able to compute the average on a larger window than a day (month or year).
+sum and count are kept in the generated processed Parquet to be able to compute the average on a larger window than a day (month or year for example).
 
 ## Steps
 
@@ -57,9 +57,9 @@ Then run the Spark application with `spark-submit`:
 spark-submit --master "local[2]" target/aggregate-metrics-1.0.jar metrics.json processed.parquet 
 ```
 
-1st argument is the input path of JSON metrics and 2nd argument is the path of the generated Parquet that will contains aggregate metrics.
+1st argument is the input path of JSON metrics and 2nd argument is the path of the generated Parquet that will contain aggregate metrics.
 
-The other way is to launch directly `App.main()` from the IDE with these arguments. (On IntelliJ enable option `Add dependencies with 'provided' scope to the classpath`) 
+The other way is to launch directly `App.main()` from the IDE with these arguments. (On IntelliJ enable option `Add dependencies with 'provided' scope to the classpath`).
 
 ## Tests
 
